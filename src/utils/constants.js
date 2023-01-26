@@ -14,7 +14,7 @@ import DeveloperModeIcon from "@mui/icons-material/DeveloperMode";
 
 // export const logo = "https://i.ibb.co/s9Qys2j/logo.png";
 export const logo =
-  "https://1000logos.net/wp-content/uploads/2017/05/Color-YouTube-logo.jpg";
+  "https://fancyodds.com/wp-content/uploads/2022/01/Top-10-Investors-Who-Invest-Their-Big-Amount-To-Get-Share-Equity-On-Youtube.jpg";
 
 export const categories = [
   { name: "New", icon: <HomeIcon /> },

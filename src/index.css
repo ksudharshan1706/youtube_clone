@@ -62,6 +62,10 @@ a {
   transition: all 0.3s ease;
 }
 
+.menuAndIcon{
+  display: flex;
+  justify-content: center;
+}
 @media screen and (max-width: 900px) {
   .category-btn{
     margin: 10px;
