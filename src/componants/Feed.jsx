@@ -8,6 +8,9 @@ import { fetchFromAPI } from '../utils/fetchFromAPI'
 const Feed = () => {
   const [selectedCategory, setselectedCategory] = useState('New')
   const [videos, setVideos] = useState([])
+  
+  
+  //after selecting a category in sidebar respective videos will be fetched into setVideos
   useEffect(()=>{
     fetchFromAPI(`search?part=snippet&q=${selectedCategory}`).then((data)=>{setVideos(data.items)})
   },[selectedCategory]);
