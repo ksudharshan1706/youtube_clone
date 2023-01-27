@@ -53,11 +53,11 @@ const VideoDetail = () => {
             </Stack>
           </Box>
         </Box>
-        {console.log(videos)}
         {videos?
-          <Box sx={{width: "25%"}} px={2} py={{ md: 1, xs: 5 }} justifyContent="center" alignItems="center" >
-          <Videos videos={videos?videos:null} direction="column" />
-        </Box> :null}
+          <Box sx={{ width:{xs:'60%',md:'25%'},marginLeft:{md:'1%',xs:'15%'}}} px={2} py={{ md: 1, xs: 5 }} justifyContent="center" alignItems="center" >
+          <Videos  videos={videos?videos:null} direction="column" />
+          </Box> :null}
+        
       </Stack>
     </Box>
   );
