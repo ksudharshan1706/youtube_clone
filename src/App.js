@@ -16,6 +16,7 @@ const App = () => {
         <NavBar
           menubutton={
             <MenuIcon
+              sx={{ display: { xs: "none", md: "block" } }}
               style={{ color: "#fff", marginTop: "10px", marginRight: "20px" }}
               onClick={() => {
                 setshow(!show);

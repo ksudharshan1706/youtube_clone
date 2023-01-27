@@ -4,6 +4,8 @@ import {logo} from '../utils/constants'
 import React from "react";
 import SearchBar from './SearchBar';
 import MenuIcon from '@mui/icons-material/Menu';
+// import { Image } from '@mui/icons-material';
+import Image from 'mui-image'
 const NavBar = ({menubutton}) => ( 
 
   
@@ -12,16 +14,15 @@ const NavBar = ({menubutton}) => (
         <img src={logo} alt="logo" height={45} />
       </Link> */}
     <div className='menuAndIcon'>
-      
-      {/* <MenuIcon style={{color:"#fff",marginTop:"10px", marginRight:"20px"}}/> */}
       {menubutton}
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>
         <img src={logo} alt="logo" height={50} />
       </Link>
     </div>
     <SearchBar />
-    <img src="https://lh3.googleusercontent.com/a/AEdFTp6MQhNIC-tSwKHA8mnT6lu3FM3MuUH3nPLjhtQpDg=s360-p-rw-no" 
-    alt="logo" height={50} width={50} style={{borderRadius:"50%",aspectRatio:1}}/>
+    {/* sx={{ display: { xs: "none", md: "block" } }} */}
+    <Image   src="https://lh3.googleusercontent.com/a/AEdFTp6MQhNIC-tSwKHA8mnT6lu3FM3MuUH3nPLjhtQpDg=s360-p-rw-no" height={50} width={50}
+    style={{borderRadius:"50%"}}  />
   </Stack>
 );
 
