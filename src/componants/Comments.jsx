@@ -6,7 +6,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 const Comments = ({comments}) => {
     console.log("comments",comments)
   return (
-    <Stack marginTop="50px" direction="column" flexWrap = "wrap" justifyContent="center" gap = {2}>
+    <CardContent marginTop="50px" direction="column" flexWrap = "wrap" justifyContent="center" gap = {2}>
         {comments.map((item,idx)=>{
             return(
             <Stack key={item.id} sx={{color:'#fff'}}> 
@@ -25,7 +25,7 @@ const Comments = ({comments}) => {
                             <CheckCircleIcon sx={{ fontSize: "12px", color: "gray", ml: "5px" }} />
                         </Typography>
                         </Link>
-                        <Typography varient="h4" marginTop="10px">
+                        <Typography  marginTop="10px">
                             {item?.snippet.topLevelComment?.snippet?.textDisplay} 
                         </Typography> 
                     </CardContent>
@@ -33,7 +33,7 @@ const Comments = ({comments}) => {
             </Stack>
             )
         })} 
-    </Stack>
+    </CardContent>
   )
 }
 
