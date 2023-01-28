@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import { IconButton } from "@mui/material";
+import { CardMedia, IconButton } from "@mui/material";
 import { Link, useParams } from "react-router-dom";
 import ReactPlayer from "react-player";
 import { Typography, Box, Stack } from "@mui/material";
@@ -11,6 +11,7 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { fetchFromAPI } from "../utils/fetchFromAPI";
 import Loader from "./Loader";
 import Comments from "./Comments";
+import { demoProfilePicture } from '../utils/constants'
 
 const VideoDetail = () => {
   const [videoDetail, setVideoDetail] = useState(null);
@@ -43,13 +44,22 @@ const VideoDetail = () => {
             <Typography color="#fff" variant="h5" fontWeight="bold" p={2} >
               {videoDetail?.snippet?.title}
             </Typography>
+            {/* {console.log(videoDetail)} */}
             <Stack direction="row" justifyContent="space-between" sx={{ color: "#fff" }} py={1} px={2} >
-              <Link to={`/channel/${videoDetail?.snippet?.channelId}`}>
-                <Typography variant={{ sm: "subtitle1", md: 'h6' }}  color="#fff" >
-                  {videoDetail?.snippet?.channelTitle}
-                  <CheckCircleIcon sx={{ fontSize: "12px", color: "gray", ml: "5px" }} />
-                </Typography>
-              </Link>
+            <Stack style={{display:"flex",flexDirection:"row"}}>
+                <Link to={`/channel/${videoDetail?.snippet?.channelId}`} >
+                  <CardMedia 
+                          image = {videoDetail?.snippet.thumbnails?.default?.url||demoProfilePicture}
+                          alt = {videoDetail?.snippet.channelTitle}
+                          sx={{borderRadius:'50%', height:'50px',width:'50px',mb:2,border:'1px solid #e3e3e3'}}
+                          /> 
+                   </Link>
+                    <Typography variant={{ sm: "subtitle1", md: 'h6' }}  color="#fff" marginTop="20px" marginLeft="10px">
+                      {videoDetail?.snippet?.channelTitle}
+                      <CheckCircleIcon sx={{ fontSize: "12px", color: "gray", ml: "5px" }} />
+                    </Typography>      
+
+              </Stack>
               <Stack direction="row" gap="20px" alignItems="center">
                 <Typography variant="body1" sx={{ opacity: 0.7 }}>
                   {parseInt(videoDetail?.statistics?.viewCount).toLocaleString()} views

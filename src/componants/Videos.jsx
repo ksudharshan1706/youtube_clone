@@ -4,7 +4,7 @@ import VideoCard from './VideoCard'
 import ChannelCard from './ChannelCard'
 import SideBar from './SideBar'
 const Videos = ({videos}) => {
-  
+  console.log(videos)
   return (
     <Stack direction="row" flexWrap = "wrap" justifyContent="center" gap = {2}>
         {videos.map((item,idx)=>{
