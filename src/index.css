@@ -66,6 +66,15 @@ a {
   display: flex;
   justify-content: center;
 }
+
+.comments{
+  color: white;
+  margin: 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+}
+
 @media screen and (max-width: 900px) {
   .category-btn{
     margin: 10px;
